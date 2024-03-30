@@ -97,8 +97,8 @@ The final report contains these columns:
 Month
 Year
 Gross sales Amount
-
-ansSELECT monthname(s.date) AS Months,
+ans
+SELECT monthname(s.date) AS Months,
 s.fiscal_year AS Years,
  month(s.date) AS Month_number,
  Round(sum(s.sold_quantity*g.gross_price)/1000000,2)AS Gross_sales_Amt 
@@ -138,7 +138,8 @@ and the percentage of contribution? The final output contains these fields,
 channel
 gross_sales_mln
 percentage
-----WITH cte AS
+Ans--
+WITH cte AS
 (
 SELECT c.Channel,round(sum(s.sold_quantity*g.gross_price)/1000000,2) AS Gross_sales_mln 
 FROM
